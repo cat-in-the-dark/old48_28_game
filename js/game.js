@@ -1,5 +1,7 @@
 
 /* Game namespace */
+me.game.MAIN_HERO_OBJECT = 4;
+
 var game = {
 
 	// an object where to store game information
@@ -50,6 +52,7 @@ var game = {
         
         me.entityPool.add("mainPlayer", game.PlayerEntity);
         me.entityPool.add("bullet", game.BulletEntity, true);
+		me.entityPool.add("healthPack", game.HealthPack, true);
         
         me.input.bindKey(me.input.KEY.W, "up");
         me.input.bindKey(me.input.KEY.A, "left");
