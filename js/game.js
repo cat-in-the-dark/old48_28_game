@@ -8,11 +8,6 @@ var game = {
 		score : 0,
 		girl_choice : ""
 	},
-    player: {
-        health : 100,
-        ammo: 48,
-        cage: 12
-    },
 	
 	
 	// Run on page load.

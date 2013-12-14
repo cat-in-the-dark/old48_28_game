@@ -89,9 +89,9 @@ game.HUD.ScoreItem = me.Renderable.extend({
 	 */
 	draw : function (context, x, y) {
 		// draw it baby !
-        console.log('drawed');
-        console.log(this.pos.x);
-        console.log(this.pos.y);
+        //console.log('drawed');
+        //console.log(this.pos.x);
+        //console.log(this.pos.y);
         
         //draw health
         this.font32.draw(context, this.health + '%', this.pos.x, this.pos.y);

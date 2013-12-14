@@ -7,7 +7,7 @@ game.BulletEntity = me.ObjectEntity.extend({
         
         this.renderable.angle = settings.angle;
        
-        this.origVelocity = new me.Vector2d(15.0, 15.0);
+        this.origVelocity = new me.Vector2d(25.0, 25.0);
         this.setVelocity(this.origVelocity.x, this.origVelocity.y);
         
         //check coordinates

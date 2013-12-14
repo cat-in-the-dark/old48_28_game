@@ -5,6 +5,13 @@ game.PlayerEntity = me.ObjectEntity.extend({
         settings.spritewidth = 32;
         this.parent(x, y, settings);
         
+        this.CAGE_SIZE = 12;
+        this.health = 100;
+        this.ammo = 48;
+        this.cage = this.CAGE_SIZE;
+        this.isWeaponCooldown = false;
+        this.weaponCooldownTime = 500;// ms
+        
         this.gravity = 0.0;
         this.origVelocity = new me.Vector2d(5.0, 5.0);
         this.setVelocity(this.origVelocity.x, this.origVelocity.y);
@@ -60,10 +67,30 @@ game.PlayerEntity = me.ObjectEntity.extend({
     
     checkPunch: function() {
         if (me.input.isKeyPressed('punch')){
-            if (true) { //check weapon cooldown 
+            if (this.checkAmmo() && !this.isWeaponCooldown && me.input.isKeyPressed('punch')) { //check weapon cooldown 
+                this.isWeaponCooldown = true;
+                var that = this;
+                setTimeout(function(){
+                    that.isWeaponCooldown = false;
+                }, this.weaponCooldownTime);
+                
                 game.doPunch({x: this.pos.x, y: this.pos.y}, this.direction);
+                this.cage -= 1;
             }
         }
+    },
+    
+    checkAmmo: function() {
+        if (this.cage == 0){
+            if (this.ammo != 0) {
+                this.cage = (this.ammo >= this.CAGE_SIZE) ? this.CAGE_SIZE : this.ammo;
+                this.ammo -= this.cage;
+                console.log(this.ammo);
+                return true;
+            }
+            return false;            
+        }
+        return true;
     },
     
     updateAnimation: function () {
