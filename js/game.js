@@ -7,12 +7,17 @@ var game = {
 		// score
 		score : 0
 	},
+    player: {
+        health : 100,
+        ammo: 48,
+        cage: 12
+    },
 	
 	
 	// Run on page load.
 	"onload" : function () {
 	// Initialize the video.
-	if (!me.video.init("screen", 480, 320, true, 'auto')) {
+	if (!me.video.init("screen", 864, 640, true, 'auto')) {
 		alert("Your browser does not support HTML5 canvas.");
 		return;
 	}

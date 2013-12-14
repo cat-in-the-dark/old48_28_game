@@ -17,7 +17,10 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
  	 */
 
-    {name: "area01", type: "tmx", src: "data/map/area01.tmx"}
+    {name: "area01", type: "tmx", src: "data/map/area01.tmx"},
+    
+    {name: "32x32_font",          type:"image", src: "data/img/32x32_font.png"},
+    {name: "16x16_font",          type:"image", src: "data/img/16x16_font.png"},
 
 	/* Background music. 
 	 * @example
