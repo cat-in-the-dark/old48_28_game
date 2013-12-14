@@ -23,5 +23,12 @@
     <property name="spritewidth" value="32"/>
    </properties>
   </object>
+  <object name="ammoPack" x="480" y="480" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
