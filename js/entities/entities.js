@@ -8,9 +8,10 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.CAGE_SIZE = 12;
         this.health = 100;
         this.ammo = 48;
-        this.cage = this.CAGE_SIZE;
+        this.cage = this.CAGE_SIZE; 
         this.isWeaponCooldown = false;
-        this.weaponCooldownTime = 500;// ms
+        this.weaponCooldownTime = 800;// ms
+        this.weaponShutTime = 150;
         
         this.gravity = 0.0;
         this.origVelocity = new me.Vector2d(5.0, 5.0);
@@ -67,12 +68,12 @@ game.PlayerEntity = me.ObjectEntity.extend({
     
     checkPunch: function() {
         if (me.input.isKeyPressed('punch')){
-            if (this.checkAmmo() && !this.isWeaponCooldown && me.input.isKeyPressed('punch')) { //check weapon cooldown 
+            if (!this.isWeaponCooldown && this.checkAmmo() && me.input.isKeyPressed('punch')) { //check weapon cooldown 
                 this.isWeaponCooldown = true;
                 var that = this;
                 setTimeout(function(){
                     that.isWeaponCooldown = false;
-                }, this.weaponCooldownTime);
+                }, this.weaponShutTime);
                 
                 game.doPunch({x: this.pos.x, y: this.pos.y}, this.direction);
                 this.cage -= 1;
@@ -83,10 +84,14 @@ game.PlayerEntity = me.ObjectEntity.extend({
     checkAmmo: function() {
         if (this.cage == 0){
             if (this.ammo != 0) {
-                this.cage = (this.ammo >= this.CAGE_SIZE) ? this.CAGE_SIZE : this.ammo;
-                this.ammo -= this.cage;
-                console.log(this.ammo);
-                return true;
+                this.isWeaponCooldown = true; 
+                var that = this;
+                setTimeout(function(){
+                    that.isWeaponCooldown = false;
+                    that.cage = (that.ammo >= that.CAGE_SIZE) ? that.CAGE_SIZE : that.ammo;
+                    that.ammo -= that.cage;
+                },this.weaponCooldownTime);
+                return false;
             }
             return false;            
         }
