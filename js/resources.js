@@ -11,6 +11,15 @@ game.resources = [
     {name: "pistoleto_icon", type: "image", src: "data/img/pistoleto_icon.png"},
     {name: "shotgun_icon", type: "image", src: "data/img/shotgun_icon.png"},
     {name: "spoon_icon", type: "image", src: "data/img/spoon_icon.png"},
+    
+    {name: "test", type: "image", src: "data/img/test.png" },
+    {name: "bullet", type: "image", src: "data/img/bullet.png" },
+
+    {name: "intro_screen", type: "image", src: "data/img/intro_screen.png"},
+    {name: "sara", type: "image", src: "data/img/sara_konnor.png"},
+    {name: "maroussia", type: "image", src: "data/img/maroussia.png"},
+    {name: "annie", type: "image", src: "data/img/annie.png"},
+    {name: "menu_background", type: "image", src: "data/img/menu_bagkground.png"},
 
 	/* Atlases 
 	 * @example
@@ -21,7 +30,7 @@ game.resources = [
 	 * @example
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
- 	 */
+     */
 
     {name: "area01", type: "tmx", src: "data/map/area01.tmx"},
     
@@ -31,7 +40,7 @@ game.resources = [
 	/* Background music. 
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
-	 */	
+	 */
 
 	/* Sound effects. 
 	 * @example
