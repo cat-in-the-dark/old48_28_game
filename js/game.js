@@ -50,6 +50,7 @@ var game = {
         
         me.entityPool.add("mainPlayer", game.PlayerEntity);
         me.entityPool.add("bullet", game.BulletEntity, true);
+		me.entityPool.add("healthPack", game.HealthPack, true);
         
         me.input.bindKey(me.input.KEY.W, "up");
         me.input.bindKey(me.input.KEY.A, "left");

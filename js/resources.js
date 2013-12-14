@@ -14,9 +14,9 @@ game.resources = [
     
     {name: "test", type: "image", src: "data/img/test.png" },
     {name: "bullet", type: "image", src: "data/img/bullet.png" },
-    
     {name: "main_hero", type: "image", src: "data/img/Main_Hero.png" },
     {name: "crazy_lady", type: "image", src: "data/img/Crazy_lady_all.png" },
+	{name: "health_pack", type: "image", src: "data/img/health_pack.png"},
 
     {name: "intro_screen", type: "image", src: "data/img/intro_screen.png"},
     {name: "sara", type: "image", src: "data/img/sara_konnor.png"},
