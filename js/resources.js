@@ -5,6 +5,11 @@ game.resources = [
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
     {name: "maptile1", type: "image", src: "data/img/maptile1.png"},
+    {name: "intro_screen", type: "image", src: "data/img/intro_screen.png"},
+    {name: "sara", type: "image", src: "data/img/sara_konnor.png"},
+    {name: "maroussia", type: "image", src: "data/img/maroussia.png"},
+    {name: "annie", type: "image", src: "data/img/annie.png"},
+    {name: "menu_background", type: "image", src: "data/img/menu_bagkground.png"},
 
 	/* Atlases 
 	 * @example

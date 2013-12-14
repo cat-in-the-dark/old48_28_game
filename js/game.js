@@ -5,7 +5,8 @@ var game = {
 	// an object where to store game information
 	data : {
 		// score
-		score : 0
+		score : 0,
+		girl_choice : ""
 	},
     player: {
         health : 100,
@@ -46,8 +47,9 @@ var game = {
 	"loaded" : function () {
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());
+        me.state.set(me.state.INTRO, new game.IntroScreen());
 
 		// Start the game.
-		me.state.change(me.state.PLAY);
+		me.state.change(me.state.INTRO);
 	}
 };
