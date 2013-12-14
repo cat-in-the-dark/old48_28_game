@@ -5,7 +5,9 @@ game.resources = [
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
     {name: "maptile1", type: "image", src: "data/img/maptile1.png"},
+    {name: "textures", type: "image", src: "data/img/textures.png"},
     {name: "panel-right", type: "image", src: "data/img/panel.png"},
+    {name: "metatiles32x32", type: "image", src: "data/img/metatiles32x32.png"},
     
     //incons
     {name: "pistoleto_icon", type: "image", src: "data/img/pistoleto_icon.png"},
@@ -36,7 +38,7 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
      */
 
-    {name: "area01", type: "tmx", src: "data/map/area01.tmx"},
+    {name: "area01", type: "tmx", src: "data/map/area02.tmx"},
     
     {name: "32x32_font",          type:"image", src: "data/img/32x32_font.png"},
     {name: "16x16_font",          type:"image", src: "data/img/16x16_font.png"},
