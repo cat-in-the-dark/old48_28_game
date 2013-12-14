@@ -36,10 +36,10 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.renderable.addAnimation("right-punch", [8, 9]);
         this.renderable.addAnimation("down-punch",  [13, 14]);
         this.renderable.addAnimation("left-punch",  [18, 19]);
-        
+
         this.renderable.setCurrentAnimation(this.directionString + "-idle");
         this.renderable.animationspeed = 8;
-        
+
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
         this.type = me.game.MAIN_HERO_OBJECT;
         game.player = this;
@@ -128,6 +128,8 @@ game.PlayerEntity = me.ObjectEntity.extend({
         
         this.updateAnimation();
         this.updateMovement();
+
+		res = me.game.collide(this);
         
         this.parent();
         return true;

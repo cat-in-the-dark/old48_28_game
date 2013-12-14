@@ -5,9 +5,13 @@ game.HealthPack = me.CollectableEntity.extend({
 		this.collidable = true;
     },
 
-    onCollision: function() {
-		console.log("collision");
-        this.collidable = false;
-        me.game.remove(this);
+    onCollision: function(res, obj) {
+        if (obj.type == me.game.MAIN_HERO_OBJECT) {
+			if (obj.health < 100) {
+				obj.health += Math.min(100 - obj.health, 10);
+				this.collidable = false;
+				me.game.remove(this);
+			}
+		}
     }
 });
