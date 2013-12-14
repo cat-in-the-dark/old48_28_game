@@ -5,6 +5,12 @@ game.resources = [
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
     {name: "maptile1", type: "image", src: "data/img/maptile1.png"},
+    {name: "panel-right", type: "image", src: "data/img/panel.png"},
+    
+    //incons
+    {name: "pistoleto_icon", type: "image", src: "data/img/pistoleto_icon.png"},
+    {name: "shotgun_icon", type: "image", src: "data/img/shotgun_icon.png"},
+    {name: "spoon_icon", type: "image", src: "data/img/spoon_icon.png"},
 
 	/* Atlases 
 	 * @example

@@ -16,6 +16,12 @@ var game = {
 	
 	// Run on page load.
 	"onload" : function () {
+        
+    //registry panel resize callback to video engine
+    game.panel.init();
+    //patch the engine. Get resize callback
+    me.video.panelResize = game.panel.onResize;
+        
 	// Initialize the video.
 	if (!me.video.init("screen", 864, 640, true, 'auto')) {
 		alert("Your browser does not support HTML5 canvas.");
@@ -44,6 +50,9 @@ var game = {
 
 	// Run on game resources loaded.
 	"loaded" : function () {
+        game.panel.resourceLoad();
+        game.panel.clear();
+        
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());
 
