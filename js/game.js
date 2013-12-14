@@ -51,6 +51,7 @@ var game = {
         game.panel.clear();
         
         me.entityPool.add("mainPlayer", game.PlayerEntity);
+        me.entityPool.add("crazy-girl", game.CrazyGirl);
         me.entityPool.add("bullet", game.BulletEntity, true);
 		me.entityPool.add("healthPack", game.HealthPack, true);
         

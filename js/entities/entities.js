@@ -107,15 +107,20 @@ game.PlayerEntity = me.ObjectEntity.extend({
     },
     
     updateAnimation: function () {
+        var to_update = false;
         if (this.vel.x != 0.0 || this.vel.y != 0.0) {
+            to_update = true;
             this.renderable.setCurrentAnimation(this.directionString + "-run");
         } else {
             this.renderable.setCurrentAnimation(this.directionString + "-idle");
         }
         
         if (this.lastBoom) {
+            to_update = true;
             this.renderable.setCurrentAnimation(this.directionString + "-punch");
         }
+        
+        return to_update;
     },
     
     update: function() {
@@ -126,10 +131,12 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.checkMovement();
         this.checkPunch();
         
-        this.updateAnimation();
-        this.updateMovement();
+        if (this.updateAnimation()){
+            this.updateMovement();
+            this.parent(this);
+            return true;
+        }
         
-        this.parent();
-        return true;
+        return false;
     }
 });
