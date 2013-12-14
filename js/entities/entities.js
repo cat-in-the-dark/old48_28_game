@@ -1,8 +1,8 @@
 game.PlayerEntity = me.ObjectEntity.extend({
     init: function(x, y, settings) {
-        settings.image = "test";
-        settings.spriteheight = 32;
-        settings.spritewidth = 32;
+        settings.image = "main_hero";
+        settings.spriteheight = 48;
+        settings.spritewidth = 48;
         this.parent(x, y, settings);
         
         this.CAGE_SIZE = 12;
@@ -21,14 +21,18 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.directionString = "up";
         var directions = [ "up", "right", "down", "left" ];
 
-        this.renderable.addAnimation("up-idle",     [0]);
-        this.renderable.addAnimation("down-idle",   [6]);
-        this.renderable.addAnimation("left-idle",   [9]);
-        this.renderable.addAnimation("right-idle",  [3]);
-        this.renderable.addAnimation("up-run",      [1, 0 , 2]);
-        this.renderable.addAnimation("down-run",    [7, 6 , 8]);
-        this.renderable.addAnimation("left-run",    [10, 9, 11]);
-        this.renderable.addAnimation("right-run",   [4, 3, 5]);
+        this.renderable.addAnimation("up-idle",     [2]);
+        this.renderable.addAnimation("down-idle",   [13]);
+        this.renderable.addAnimation("left-idle",   [18]);
+        this.renderable.addAnimation("right-idle",  [7]);
+        this.renderable.addAnimation("up-run",      [0, 1]);
+        this.renderable.addAnimation("down-run",    [10, 11]);
+        this.renderable.addAnimation("left-run",    [15, 16]);
+        this.renderable.addAnimation("right-run",   [5, 6]);
+        this.renderable.addAnimation("up-punch",    [14, 15]);
+        this.renderable.addAnimation("down-punch",  [20, 21]);
+        this.renderable.addAnimation("right-punch", [8, 9]);
+        this.renderable.addAnimation("left-punch",  [26, 27]);
         
         this.renderable.setCurrentAnimation(this.directionString + "-run");
         this.renderable.animationspeed = 8;
