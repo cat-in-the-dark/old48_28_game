@@ -5,6 +5,9 @@ game.resources = [
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
     {name: "maptile1", type: "image", src: "data/img/maptile1.png"},
+    
+    {name: "test", type: "image", src: "data/img/test.png" },
+    {name: "bullet", type: "image", src: "data/img/bullet.png" },
 
 	/* Atlases 
 	 * @example
@@ -15,14 +18,14 @@ game.resources = [
 	 * @example
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
- 	 */
+     */
 
     {name: "area01", type: "tmx", src: "data/map/area01.tmx"}
 
 	/* Background music. 
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
-	 */	
+	 */
 
 	/* Sound effects. 
 	 * @example
