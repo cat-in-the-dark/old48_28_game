@@ -26,7 +26,7 @@ game.HUD.Container = me.ObjectContainer.extend({
 		this.name = "HUD";
 		
 		// add our child score object at the top left corner
-		this.addChild(new game.HUD.ScoreItem(5, 5));
+		this.addChild(new game.HUD.ScoreItem(520, 570));
 	}
 });
 
@@ -45,30 +45,64 @@ game.HUD.ScoreItem = me.Renderable.extend({
 		this.parent(new me.Vector2d(x, y), 10, 10); 
 		
 		// local copy of the global score
-		this.score = -1;
+		this.health = -1;
+        this.ammo = -1;
+        this.cage = -1;
 
 		// make sure we use screen coordinates
 		this.floating = true;
+        
+        this.font32 = new me.BitmapFont("32x32_font", 32);
+        this.font16 = new me.BitmapFont("16x16_font", 16);
+        //this.font.set("right");
 	},
+    
+    updateVars : function () {
+        this.health = game.player.health;
+        this.ammo =  game.player.ammo;
+        this.cage = game.player.cage;
+    },
+    needHealthUp : function () {
+        return this.health !== game.player.health;
+    },
+    needAmmoUp : function () {
+        return this.ammo !== game.player.ammo;
+    },
+    needCageUp : function () {
+        return this.cage !== game.player.cage;
+    },
 
 	/**
 	 * update function
 	 */
 	update : function () {
-		// we don't do anything fancy here, so just
-		// return true if the score has been updated
-		if (this.score !== game.data.score) {	
-			this.score = game.data.score;
-			return true;
-		}
+		if( this.needHealthUp() || this.needAmmoUp() || this.needCageUp() ){
+            this.updateVars();
+            return true;
+        }
+        
 		return false;
 	},
 
 	/**
 	 * draw the score
 	 */
-	draw : function (context) {
+	draw : function (context, x, y) {
 		// draw it baby !
+        console.log('drawed');
+        console.log(this.pos.x);
+        console.log(this.pos.y);
+        
+        //draw health
+        this.font32.draw(context, this.health + '%', this.pos.x, this.pos.y);
+        this.font16.draw(context, 'HEALTH', this.pos.x+20, this.pos.y+40);
+        
+        var dx = 140;
+        //draw ammo
+        this.font32.draw(context, this.ammo + '/' + this.cage, this.pos.x + dx, this.pos.y);
+        this.font16.draw(context, 'AMMO', this.pos.x + dx + 35, this.pos.y+40);
+        
+        
 	}
 
 });

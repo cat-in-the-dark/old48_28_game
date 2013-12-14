@@ -5,14 +5,20 @@ var game = {
 	// an object where to store game information
 	data : {
 		// score
-		score : 0
+		score : 0,
+		girl_choice : ""
 	},
+    player: {
+        health : 100,
+        ammo: 48,
+        cage: 12
+    },
 	
 	
 	// Run on page load.
 	"onload" : function () {
         // Initialize the video.
-        if (!me.video.init("screen", 480, 320, true, 'auto')) {
+        if (!me.video.init("screen", 864, 640, true, 'auto')) {
             alert("Your browser does not support HTML5 canvas.");
             return;
         }
@@ -50,9 +56,11 @@ var game = {
         
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());
+        me.state.set(me.state.INTRO, new game.IntroScreen());
 
 		// Start the game.
 		me.state.change(me.state.PLAY);
+        //me.state.change(me.state.INTRO);
 	},
     
     doPunch: function (source, direction) {
