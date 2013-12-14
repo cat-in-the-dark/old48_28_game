@@ -1,5 +1,7 @@
 
 /* Game namespace */
+me.game.MAIN_HERO_OBJECT = 4;
+
 var game = {
 
 	// an object where to store game information

@@ -12,6 +12,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.isWeaponCooldown = false;
         this.weaponCooldownTime = 800;// ms
         this.weaponShutTime = 150;
+        this.lastBoom = false; //  to update animation after shooting
         
         this.gravity = 0.0;
         this.origVelocity = new me.Vector2d(5.0, 5.0);
@@ -21,23 +22,26 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.directionString = "up";
         var directions = [ "up", "right", "down", "left" ];
 
-        this.renderable.addAnimation("up-idle",     [2]);
-        this.renderable.addAnimation("down-idle",   [13]);
-        this.renderable.addAnimation("left-idle",   [18]);
-        this.renderable.addAnimation("right-idle",  [7]);
         this.renderable.addAnimation("up-run",      [0, 1]);
+        this.renderable.addAnimation("right-run",   [5, 6]);
         this.renderable.addAnimation("down-run",    [10, 11]);
         this.renderable.addAnimation("left-run",    [15, 16]);
-        this.renderable.addAnimation("right-run",   [5, 6]);
-        this.renderable.addAnimation("up-punch",    [14, 15]);
-        this.renderable.addAnimation("down-punch",  [20, 21]);
-        this.renderable.addAnimation("right-punch", [8, 9]);
-        this.renderable.addAnimation("left-punch",  [26, 27]);
         
-        this.renderable.setCurrentAnimation(this.directionString + "-run");
+        this.renderable.addAnimation("up-idle",     [2]);
+        this.renderable.addAnimation("right-idle",  [7]);
+        this.renderable.addAnimation("down-idle",   [12]);
+        this.renderable.addAnimation("left-idle",   [17]);
+            
+        this.renderable.addAnimation("up-punch",    [3, 4]);
+        this.renderable.addAnimation("right-punch", [8, 9]);
+        this.renderable.addAnimation("down-punch",  [13, 14]);
+        this.renderable.addAnimation("left-punch",  [18, 19]);
+        
+        this.renderable.setCurrentAnimation(this.directionString + "-idle");
         this.renderable.animationspeed = 8;
         
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
+        this.type = me.game.MAIN_HERO_OBJECT;
         game.player = this;
         console.log(this);
     },
@@ -78,7 +82,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 setTimeout(function(){
                     that.isWeaponCooldown = false;
                 }, this.weaponShutTime);
-                
+                this.lastBoom = true;
                 game.doPunch({x: this.pos.x, y: this.pos.y}, this.direction);
                 this.cage -= 1;
             }
@@ -108,14 +112,19 @@ game.PlayerEntity = me.ObjectEntity.extend({
         } else {
             this.renderable.setCurrentAnimation(this.directionString + "-idle");
         }
+        
+        if (this.lastBoom) {
+            this.renderable.setCurrentAnimation(this.directionString + "-punch");
+        }
     },
     
     update: function() {
         this.vel.x = 0;
         this.vel.y = 0;
+        this.lastBoom = false;
         
-        this.checkPunch();
         this.checkMovement();
+        this.checkPunch();
         
         this.updateAnimation();
         this.updateMovement();
