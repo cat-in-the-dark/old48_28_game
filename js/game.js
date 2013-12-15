@@ -75,6 +75,7 @@ var game = {
         me.input.bindKey(me.input.KEY.S, "down");
         me.input.bindKey(me.input.KEY.D, "right");
         me.input.bindKey(me.input.KEY.P, "punch");
+        me.input.bindKey(me.input.KEY.O, "action");
         
         me.debug.renderHitBox = true;
         
@@ -83,8 +84,8 @@ var game = {
         me.state.set(me.state.INTRO, new game.IntroScreen());
 
 		// Start the game.
-		me.state.change(me.state.PLAY);
-        //me.state.change(me.state.INTRO);
+//		me.state.change(me.state.PLAY);
+        me.state.change(me.state.INTRO);
 	},
     
     doPunch: function (id, source, direction) {

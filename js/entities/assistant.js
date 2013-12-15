@@ -1,12 +1,27 @@
 game.AssistantEntity = me.ObjectEntity.extend({
     init: function (x, y, settings) {
-        settings.image = "nurse";
         settings.spriteheight = 48;
         settings.spritewidth = 48;
+        if (game.data.girl_choice == "annie") {
+            settings.image = "nurse";
+            game.DOCTOR_GIRL_ID = this.GUID;
+            this.collectedHealthPacks = 0;
+        } else if (game.data.girl_choice == "sara") {
+            settings.image = "shooter";
+            this.isWeaponCooldown = false;
+            this.weaponShutTime = 2000;
+            game.SHOOTER_GIRL_ID = this.GUID;
+            this.damage = 1;
+            this.weapon = game.panel.SHOTGUN;
+            this.name = "Sara";
+        }
+        
+        this.bulletDirection = {
+            x: 0.0,
+            y: -1.0
+        }
         
         this.parent(x, y, settings);
-        game.DOCTOR_GIRL_ID = this.GUID; // or SHUTER_GIRL_ID
-        
         this.gravity = 0.0;
         
         this.origVelocity = new me.Vector2d(4.5, 4.5);
@@ -39,6 +54,7 @@ game.AssistantEntity = me.ObjectEntity.extend({
         //for debug
         this.posX = 1.0 * 48;
         this.posY = 1.0 * 48;
+        game.objectsPool[this.GUID] = this;
         
         this.updateColRect(8, 32, 8, 32);
     },
@@ -60,29 +76,85 @@ game.AssistantEntity = me.ObjectEntity.extend({
         
         if (this.vel.x > 0.0) {
             this.directionString = "right";
+            this.bulletDirection.x = 1.0;
+            this.bulletDirection.y = 0.0;
         }
         if (this.vel.x < 0.0) {
             this.directionString = "left";
+            this.bulletDirection.x = -1.0;
+            this.bulletDirection.y = 0.0;
         }
         if (this.vel.y > 0.0) {
             this.directionString = "down";
+            this.bulletDirection.x = 0.0;
+            this.bulletDirection.y = 1.0;
         }
         if (this.vel.y < 0.0) {
             this.directionString = "up";
+            this.bulletDirection.x = 0.0;
+            this.bulletDirection.y = -1.0;
         }
 //        this.directionString = game.player.directionString;
     },
+
+    checkAction: function() {
+        if (me.input.isKeyPressed('action')){
+            if (game.data.girl_choice == "annie") {
+                this.actionNurse();
+            } else if (game.data.girl_choice == "sara") {
+                this.actionShooter();
+            }
+        }
+    },
     
+    actionNurse: function() {
+        if ((this.collectedHealthPacks > 0) && (game.player.health < 100)) {
+            game.player.heal(10);
+            this.collectedHealthPacks --;
+            this.lastAction = true;
+        }
+    },
+    
+    actionShooter: function() {
+        if (!this.isWeaponCooldown) {
+            this.isWeaponCooldown = true;
+            var that = this;
+            setTimeout(function(){
+                that.isWeaponCooldown = false;
+            }, this.weaponShutTime);
+            this.lastAction = true;
+            game.doPunch(this.GUID, {x: this.pos.x, y: this.pos.y}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
+            game.doPunch(this.GUID, {x: this.pos.x + 10, y: this.pos.y + 10}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
+            game.doPunch(this.GUID, {x: this.pos.x + 20, y: this.pos.y + 20}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
+        }
+    },
+
     updateAnimation: function () {
         if (this.vel.x != 0.0 || this.vel.y != 0.0) {
             this.renderable.setCurrentAnimation(this.directionString + "-run");
         } else {
             this.renderable.setCurrentAnimation(this.directionString + "-idle");
         }
+        if (this.lastAction) {
+            this.renderable.setCurrentAnimation(this.directionString + "-action");
+        }
+    },
+    
+    updateNurse: function() {
+    },
+    
+    updateShooter: function() {
     },
     
     update: function () {
+        if (game.data.girl_choice == "annie") {
+            this.updateNurse();
+        } else if (game.data.girl_choice == "sara") {
+            this.updateShooter();
+        }
+        this.lastAction = false;
         this.checkMovement();
+        this.checkAction();
         this.updateAnimation();
 
         this.updateMovement();

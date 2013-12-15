@@ -6,14 +6,16 @@ game.HealthPack = me.CollectableEntity.extend({
     },
 
     onCollision: function(res, obj) {
-        if (obj.type == me.game.MAIN_HERO_OBJECT) {
-			if (obj.health < 100) {
-				obj.health += Math.min(100 - obj.health, 10);
-				this.collidable = false;
-				me.game.remove(this);
-                
-                me.audio.play('beer');
-			}
+        if (obj.type == me.game.MAIN_HERO_OBJECT || (obj.type == me.game.ASSISTANT_OBJECT)) {
+			if (game.player.health < 100) {
+				game.player.heal(10);
+                this.collidable = false;
+                me.game.remove(this);
+			} else if (game.data.girl_choice == "annie") {
+                game.assistant.collectedHealthPacks ++;
+                this.collidable = false;
+                me.game.remove(this);
+            }
 		}
     }
 });
