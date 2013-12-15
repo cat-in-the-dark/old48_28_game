@@ -55,6 +55,10 @@ game.resources = [
     //hero
     {name: "hard", type: "audio", src: "data/sfx/hero/", channel : 1},
     {name: "usp", type: "audio", src: "data/sfx/hero/", channel : 1},
+    {name: "usp_clipin", type: "audio", src: "data/sfx/hero/", channel : 1},
+    {name: "usp_clipout", type: "audio", src: "data/sfx/hero/", channel : 1},
+//    {name: "usp_slideback", type: "audio", src: "data/sfx/hero/", channel : 1},
+//    {name: "usp_sliderelease", type: "audio", src: "data/sfx/hero/", channel : 1},
     //assistance
     {name: "shotgun",  type: "audio", src: "data/sfx/assistant/", channel : 2},
     //mobs

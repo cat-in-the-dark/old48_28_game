@@ -108,6 +108,8 @@ game.PlayerEntity = me.ObjectEntity.extend({
             if (this.ammo != 0) {
                 this.isWeaponCooldown = true; 
                 var that = this;
+                
+                me.audio.play('usp_clipin');
                 setTimeout(function(){
                     that.isWeaponCooldown = false;
                     that.cage = (that.ammo >= that.CAGE_SIZE) ? that.CAGE_SIZE : that.ammo;
@@ -115,6 +117,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 },this.weaponCooldownTime);
                 return false;
             }
+            me.audio.play('usp_clipout');
             return false;            
         }
         return true;
@@ -132,6 +135,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         if (this.lastBoom) {
             to_update = true;
             this.renderable.setCurrentAnimation(this.directionString + "-punch");
+            me.audio.play("usp");
         }
         
         return to_update;

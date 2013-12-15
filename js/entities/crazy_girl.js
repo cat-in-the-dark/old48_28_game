@@ -1,3 +1,8 @@
+function getRandomInt(min, max){
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
 game.CrazyGirl = me.ObjectEntity.extend({
     init: function (x, y, settings) {    
         settings.image = "crazy_girl";
@@ -13,6 +18,8 @@ game.CrazyGirl = me.ObjectEntity.extend({
         this.setMaxVelocity(this.origVelocity.x, this.origVelocity.y);
         
         this.health = 3;
+        
+        this.deathSounds = ['mob_die1', 'mob_die2', 'mob_die3', 'mob_die4', 'mob_die5'];
         
         game.objectsPool[this.GUID] = this;
     },
@@ -56,6 +63,10 @@ game.CrazyGirl = me.ObjectEntity.extend({
             console.log(this.GUID + 'Die');
             me.game.remove(this);
             delete game.objectsPool[this.GUID];
+            
+            var rand = getRandomInt (0,4);
+            console.log(rand);
+            me.audio.play(this.deathSounds[rand]);
         }
     },
     
