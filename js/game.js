@@ -77,16 +77,19 @@ var game = {
         me.input.bindKey(me.input.KEY.D, "right");
         me.input.bindKey(me.input.KEY.P, "punch");
         me.input.bindKey(me.input.KEY.O, "action");
+        me.input.bindKey(me.input.KEY.ENTER, "enter", true);
         
         me.debug.renderHitBox = true;
         
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());
-        me.state.set(me.state.INTRO, new game.IntroScreen());
+        me.state.set(me.state.CREDITS, new game.IntroScreen());
+        me.state.set(me.state.GAMEOVER, new game.LooserScreen());
 
 		// Start the game.
-//		me.state.change(me.state.PLAY);
-        me.state.change(me.state.INTRO);
+        //game.data.girl_choice = "sara";
+		//me.state.change(me.state.PLAY);
+        me.state.change(me.state.CREDITS);
 	},
     
     doPunch: function (id, source, direction) {
@@ -113,7 +116,9 @@ var game = {
             game.panel.kill(puncher.name, puncher.weapon, dieInfo.name);
             console.log('Die ' + dieInfo.name);
             if (targetId == game.MAIN_HERO_ID || targetId == game.DOCTOR_GIRL_ID || targetId == game.SHUTER_GIRL_ID) {
-                console.log('GAME_OVER');
+                setTimeout(function(){
+                    me.state.change(me.state.GAMEOVER);
+                },2000);
             }
         }
     }
