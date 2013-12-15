@@ -1,14 +1,15 @@
-function getRandomInt(min, max){
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-
 game.CrazyGirl = me.ObjectEntity.extend({
     init: function (x, y, settings) {    
         settings.image = "crazy_girl";
         settings.spriteheight = 48;
         settings.spritewidth = 48;
         
+        
+        this.weapon = game.panel.HAND;
+        this.damage = game.getRandomInt(10,15);
+        this.health = game.getRandomInt(1,5);
+        
+        this.name = "Crazy girl";
         this.parent(x, y, settings);
         this.gravity = 0.0;
         this.type = me.game.ENEMY_OBJECT;
@@ -17,7 +18,6 @@ game.CrazyGirl = me.ObjectEntity.extend({
         this.origVelocity = new me.Vector2d(3.0, 3.0);
         this.setMaxVelocity(this.origVelocity.x, this.origVelocity.y);
         
-        this.health = 3;
         
         this.deathSounds = ['mob_die1', 'mob_die2', 'mob_die3', 'mob_die4', 'mob_die5'];
         
@@ -55,19 +55,19 @@ game.CrazyGirl = me.ObjectEntity.extend({
 
     punched: function(damage) {
         this.health -= damage;  
-        this.isItTimeToDie();
     },
     
     isItTimeToDie: function() {
         if (this.health <= 0) {
-            console.log(this.GUID + 'Die');
             me.game.remove(this);
             delete game.objectsPool[this.GUID];
-            
-            var rand = getRandomInt (0,4);
-            console.log(rand);
+
+            var rand = game.getRandomInt (0,4);
             me.audio.play(this.deathSounds[rand]);
+
+            return {name: this.name};
         }
+        return;
     },
     
     update: function () {

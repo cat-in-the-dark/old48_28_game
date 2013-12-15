@@ -4,6 +4,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
         settings.spriteheight = 48;
         settings.spritewidth = 48;
         this.parent(x, y, settings);
+        this.name = "Boy";
+        this.weapon = game.panel.PISTOLETO;
+        this.damage = 1;
         
         game.MAIN_HERO_ID = this.GUID;
         
@@ -48,6 +51,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
         this.type = me.game.MAIN_HERO_OBJECT;
+        game.objectsPool[this.GUID] = this;
         game.player = this;
         console.log(this);
     },
@@ -101,6 +105,19 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 this.cage -= 1;
             }
         }
+    },
+    
+    punched: function (damage) {
+        this.health -= damage;
+    },
+    
+    isItTimeToDie: function () {
+        if (this.health <= 0) {
+            me.game.remove(this);
+            delete game.objectsPool[this.GUID];
+            return {name: this.name};
+        }
+        return;
     },
     
     checkAmmo: function() {
