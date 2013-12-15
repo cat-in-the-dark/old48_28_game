@@ -24,13 +24,13 @@ game.TitleScreen = me.ScreenObject.extend({
     },
 
 	onResetEvent: function () {
+        console.log("menu");
 		if (this.title == null) {
             this.title = me.loader.getImage("menu_background");
         }
 		if (this.font == null) {
 			this.font = new me.BitmapFont("32x32_font", 32);
 		}
-		me.input.bindKey(me.input.KEY.ENTER, "enter", true);
 	},
 
 	update: function () {

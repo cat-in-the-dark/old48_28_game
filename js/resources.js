@@ -27,6 +27,8 @@ game.resources = [
     {name: "maroussia", type: "image", src: "data/img/maroussia.png"},
     {name: "annie", type: "image", src: "data/img/annie.png"},
     {name: "menu_background", type: "image", src: "data/img/menu_bagkground.png"},
+    {name: "win_screen", type: "image", src: "data/img/win_screen.png"},
+    {name: "loose_screen", type: "image", src: "data/img/loose_screen.png"},
     {name: "nurse", type: "image", src: "data/img/nurse.png"},
     {name: "blood", type: "image", src: "data/img/blood.png"},
 
