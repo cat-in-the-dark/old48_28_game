@@ -52,14 +52,14 @@ game.resources = [
      * Sound effects. 
      */
     //hero
-    {name: "hard", type: "audio", src: "data/sfx/hero", channel : 1},
-    {name: "ups", type: "audio", src: "data/sfx/hero", channel : 1},
+    {name: "hard", type: "audio", src: "data/sfx/hero/", channel : 1},
+    {name: "usp", type: "audio", src: "data/sfx/hero/", channel : 1},
     //assistance
-    {name: "shotgun",  type: "audio", src: "data/sfx/assistant", channel : 2},
+    {name: "shotgun",  type: "audio", src: "data/sfx/assistant/", channel : 2},
     //mobs
-    {name: "mob_die1",  type: "audio", src: "data/sfx/mob", channel : 3},
-    {name: "mob_die2",  type: "audio", src: "data/sfx/mob", channel : 4},
-    {name: "mob_die3",  type: "audio", src: "data/sfx/mob", channel : 5},
-    {name: "mob_die4",  type: "audio", src: "data/sfx/mob", channel : 6},
-    {name: "mob_die5",  type: "audio", src: "data/sfx/mob", channel : 7}
+    {name: "mob_die1",  type: "audio", src: "data/sfx/mob/", channel : 3},
+    {name: "mob_die2",  type: "audio", src: "data/sfx/mob/", channel : 4},
+    {name: "mob_die3",  type: "audio", src: "data/sfx/mob/", channel : 5},
+    {name: "mob_die4",  type: "audio", src: "data/sfx/mob/", channel : 6},
+    {name: "mob_die5",  type: "audio", src: "data/sfx/mob/", channel : 7}
 ];
