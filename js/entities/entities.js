@@ -114,6 +114,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
     
     punched: function (damage) {
         this.health -= damage;
+        if (this.health <= 0) {
+            this.health = 0;
+        }
     },
     
     isItTimeToDie: function () {

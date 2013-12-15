@@ -106,7 +106,6 @@ var game = {
         
         var puncher = this.objectsPool[whoHitId];
         var obj = this.objectsPool[targetId];
-        
         obj.punched(puncher.damage);
         var dieInfo;
         if (dieInfo = obj.isItTimeToDie()){
