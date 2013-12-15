@@ -31,7 +31,7 @@ var game = {
         game.panel.init();
         //patch the engine. Get resize callback
         me.video.panelResize = game.panel.onResize;
-        
+        me.sys.preRender = true;
         // Initialize the video.
         if (!me.video.init("screen", 864, 640, true, 'auto')) {
             alert("Your browser does not support HTML5 canvas.");
