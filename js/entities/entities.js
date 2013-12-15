@@ -53,6 +53,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.type = me.game.MAIN_HERO_OBJECT;
         game.objectsPool[this.GUID] = this;
         game.player = this;
+        this.updateColRect(8, 32, 8, 32);
         console.log(this);
     },
     
@@ -162,11 +163,27 @@ game.PlayerEntity = me.ObjectEntity.extend({
         return to_update;
     },
     
+    updateBullets: function() {
+        for (var i = 0, len = game.bullet_pull.length; i < len; i ++) {
+//            console.log(game.bullet_pull[i].inViewport);
+            console.log(game.bullet_pull[i]);
+            if(!(game.bullet_pull[i].inViewport)) {
+                console.log("here");
+                me.game.remove(game.bullet_pull[i]);
+                game.bullet_pull[i] = null;
+                game.bullet_pull.splice(i, 1);
+                len = game.bullet_pull.length;
+                i--;
+            }
+        }
+    },
+    
     update: function() {
         this.vel.x = 0;
         this.vel.y = 0;
         this.lastBoom = false;
         
+        this.updateBullets();
         this.checkMovement();
         this.checkPunch();
 

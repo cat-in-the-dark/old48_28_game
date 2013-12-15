@@ -1,5 +1,5 @@
 game.BulletEntity = me.ObjectEntity.extend({
-    init: function(x, y, direction, settings) {   
+    init: function(x, y, direction, settings) {  
         this.parent(x, y, settings);
         this.gravity = 0.0;
         this.direction = direction;
@@ -10,6 +10,9 @@ game.BulletEntity = me.ObjectEntity.extend({
        
         this.origVelocity = new me.Vector2d(25.0, 25.0);
         this.setVelocity(this.origVelocity.x, this.origVelocity.y);
+        this.updateColRect(8, 8, 8, 8);
+        this.inViewport = true; //a little splint
+        game.bullet_pull.push(this);
     },
     
     update: function() {
@@ -20,7 +23,7 @@ game.BulletEntity = me.ObjectEntity.extend({
         this.computeVelocity(this.vel);
         this.updateMovement();
         
-        if (this.vel.x == 0 && this.vel.y == 0) {
+        if ((this.vel.x == 0 && this.vel.y == 0)) {
             me.game.remove(bullet);
         }
         
