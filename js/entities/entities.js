@@ -17,7 +17,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.weaponCooldownTime = 800;// ms
         this.weaponShutTime = 150;
         this.lastBoom = false; //  to update animation after shooting
-
+        
         this.gravity = 0.0;
         this.origVelocity = new me.Vector2d(5.0, 5.0);
         this.setVelocity(this.origVelocity.x, this.origVelocity.y);
@@ -25,8 +25,8 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.bulletDirection = {
             x: 0.0,
             y: -1.0
-        };
-
+        }
+        
         this.directionString = "up";
         var directions = [ "up", "right", "down", "left" ];
 
