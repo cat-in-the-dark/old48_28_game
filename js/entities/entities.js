@@ -103,9 +103,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 }, this.weaponShutTime);
                 this.lastBoom = true;
                 if (this.cage % 2 == 0) {
-                    game.doPunch(this.GUID, {x: this.pos.x, y: this.pos.y}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
+                    game.doPunch(this.GUID, {x: this.pos.x + 12, y: this.pos.y}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
                 } else {
-                    game.doPunch(this.GUID, {x: this.pos.x + 20, y: this.pos.y + 20}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
+                    game.doPunch(this.GUID, {x: this.pos.x + 30, y: this.pos.y + 30}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
                 }
                 this.cage -= 1;
             }

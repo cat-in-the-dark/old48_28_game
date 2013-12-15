@@ -93,8 +93,8 @@ var game = {
         var settings = { 
             id: id,
             image: "bullet",
-            spriteheight: 24,
-            spritewidth: 24
+            spriteheight: 9,
+            spritewidth: 9
         };
         var obj = me.entityPool.newInstanceOf("bullet", source.x, source.y, direction, settings);
         

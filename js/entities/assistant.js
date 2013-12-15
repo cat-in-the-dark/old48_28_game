@@ -122,9 +122,9 @@ game.AssistantEntity = me.ObjectEntity.extend({
                 that.isWeaponCooldown = false;
             }, this.weaponShutTime);
             this.lastAction = true;
-            game.doPunch(this.GUID, {x: this.pos.x, y: this.pos.y}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
-            game.doPunch(this.GUID, {x: this.pos.x + 10, y: this.pos.y + 10}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
-            game.doPunch(this.GUID, {x: this.pos.x + 20, y: this.pos.y + 20}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
+            game.doPunch(this.GUID, {x: this.pos.x + 4, y: this.pos.y + 4 }, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
+            game.doPunch(this.GUID, {x: this.pos.x + 14, y: this.pos.y + 14}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
+            game.doPunch(this.GUID, {x: this.pos.x + 24, y: this.pos.y + 24}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
             me.audio.play("shotgun");
         }
     },
