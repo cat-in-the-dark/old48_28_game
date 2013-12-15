@@ -17,9 +17,6 @@ game.WinScreen = me.ScreenObject.extend({
     },
 
     update: function() {
-        if (me.input.isKeyPressed('enter')){
-            me.state.change(this.to_state);
-        }
     },
 
     onDestryEvent: function() {

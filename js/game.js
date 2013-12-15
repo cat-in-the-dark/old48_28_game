@@ -70,6 +70,7 @@ var game = {
 		me.entityPool.add("ammoPack", game.AmmoPack, true);
         me.entityPool.add("assistant", game.AssistantEntity, true);
         me.entityPool.add("blood", game.Blood, true);
+        me.entityPool.add("finishEntity", game.FinishEntity, true);
         
         me.input.bindKey(me.input.KEY.W, "up");
         me.input.bindKey(me.input.KEY.A, "left");
@@ -85,6 +86,7 @@ var game = {
 		me.state.set(me.state.PLAY, new game.PlayScreen());
         me.state.set(me.state.CREDITS, new game.IntroScreen());
         me.state.set(me.state.GAMEOVER, new game.LooserScreen());
+        me.state.set(me.state.GAME_END, new game.WinScreen());
 
 		// Start the game.
         //game.data.girl_choice = "sara";
