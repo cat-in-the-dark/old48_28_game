@@ -45,7 +45,7 @@
   </object>
   <object name="crazy-girl" x="480" y="352" width="32" height="32"/>
   <object name="crazy-girl" x="807" y="3647" width="32" height="32"/>
-  <object name="assistant" x="736" y="672" width="32" height="32"/>
+  <object name="assistant" x="222" y="3741" width="32" height="32"/>
   <object name="crazy-girl" x="529" y="707" width="32" height="32"/>
   <object name="crazy-girl" x="487" y="828" width="32" height="32"/>
   <object name="crazy-girl" x="848" y="3428" width="32" height="32"/>
@@ -56,16 +56,196 @@
   <object name="crazy-girl" x="996" y="3636" width="32" height="32"/>
   <object name="crazy-girl" x="724" y="3213" width="32" height="32"/>
   <object name="crazy-girl" x="444" y="3269" width="32" height="32"/>
-  <object name="crazy-girl" x="444" y="3020" width="32" height="32"/>
-  <object name="crazy-girl" x="514" y="3110" width="32" height="32"/>
-  <object name="crazy-girl" x="564" y="2970" width="32" height="32"/>
-  <object name="crazy-girl" x="636" y="3081" width="32" height="32"/>
-  <object name="crazy-girl" x="770" y="2986" width="32" height="32"/>
+  <object name="crazy-girl" x="378" y="2762" width="32" height="32"/>
+  <object name="crazy-girl" x="222" y="3114" width="32" height="32"/>
+  <object name="crazy-girl" x="119" y="2864" width="32" height="32"/>
+  <object name="crazy-girl" x="186" y="2529" width="32" height="32"/>
+  <object name="crazy-girl" x="414" y="2330" width="32" height="32"/>
   <object name="crazy-girl" x="889" y="3093" width="32" height="32"/>
   <object name="crazy-girl" x="938" y="2979" width="32" height="32"/>
   <object name="crazy-girl" x="865" y="2820" width="32" height="32"/>
   <object name="crazy-girl" x="671" y="2820" width="32" height="32"/>
   <object name="crazy-girl" x="717" y="2701" width="32" height="32"/>
+  <object name="crazy-girl" x="1314" y="3765" width="32" height="32"/>
+  <object name="crazy-girl" x="1471" y="3641" width="32" height="32"/>
+  <object name="crazy-girl" x="1650" y="3729" width="32" height="32"/>
+  <object name="crazy-girl" x="1736" y="3570" width="32" height="32"/>
+  <object name="crazy-girl" x="2057" y="3634" width="32" height="32"/>
+  <object name="crazy-girl" x="2138" y="3580" width="32" height="32"/>
+  <object name="crazy-girl" x="2213" y="3749" width="32" height="32"/>
+  <object name="crazy-girl" x="2444" y="3685" width="32" height="32"/>
+  <object name="crazy-girl" x="2518" y="3587" width="32" height="32"/>
+  <object name="crazy-girl" x="2663" y="3728" width="32" height="32"/>
+  <object name="crazy-girl" x="2989" y="3650" width="32" height="32"/>
+  <object name="crazy-girl" x="3065" y="3747" width="32" height="32"/>
+  <object name="crazy-girl" x="3260" y="3598" width="32" height="32"/>
+  <object name="crazy-girl" x="3374" y="3743" width="32" height="32"/>
+  <object name="crazy-girl" x="3631" y="3647" width="32" height="32"/>
+  <object name="crazy-girl" x="3572" y="3488" width="32" height="32"/>
+  <object name="crazy-girl" x="3676" y="3385" width="32" height="32"/>
+  <object name="crazy-girl" x="3580" y="3212" width="32" height="32"/>
+  <object name="crazy-girl" x="3430" y="3141" width="32" height="32"/>
+  <object name="crazy-girl" x="2487" y="3370" width="32" height="32"/>
+  <object name="crazy-girl" x="3385" y="2927" width="32" height="32"/>
+  <object name="crazy-girl" x="2835" y="3394" width="32" height="32"/>
+  <object name="crazy-girl" x="3118" y="3120" width="32" height="32"/>
+  <object name="crazy-girl" x="2830" y="371" width="32" height="32"/>
+  <object name="crazy-girl" x="2830" y="220" width="32" height="32"/>
+  <object name="crazy-girl" x="2833" y="95" width="32" height="32"/>
+  <object name="crazy-girl" x="2944" y="221" width="32" height="32"/>
+  <object name="crazy-girl" x="2947" y="96" width="32" height="32"/>
+  <object name="crazy-girl" x="2944" y="372" width="32" height="32"/>
+  <object name="crazy-girl" x="3104" y="221" width="32" height="32"/>
+  <object name="crazy-girl" x="3107" y="96" width="32" height="32"/>
+  <object name="crazy-girl" x="3104" y="372" width="32" height="32"/>
+  <object name="crazy-girl" x="3232" y="221" width="32" height="32"/>
+  <object name="crazy-girl" x="3235" y="96" width="32" height="32"/>
+  <object name="crazy-girl" x="3232" y="372" width="32" height="32"/>
+  <object name="crazy-girl" x="3360" y="221" width="32" height="32"/>
+  <object name="crazy-girl" x="3363" y="96" width="32" height="32"/>
+  <object name="crazy-girl" x="3360" y="372" width="32" height="32"/>
+  <object name="crazy-girl" x="3040" y="96" width="32" height="32"/>
+  <object name="crazy-girl" x="3008" y="224" width="32" height="32"/>
+  <object name="crazy-girl" x="3008" y="384" width="32" height="32"/>
+  <object name="crazy-girl" x="3624" y="172" width="32" height="32"/>
+  <object name="crazy-girl" x="3669" y="292" width="32" height="32"/>
+  <object name="crazy-girl" x="3587" y="444" width="32" height="32"/>
+  <object name="crazy-girl" x="3620" y="633" width="32" height="32"/>
+  <object name="crazy-girl" x="3328" y="583" width="32" height="32"/>
+  <object name="crazy-girl" x="3097" y="547" width="32" height="32"/>
+  <object name="crazy-girl" x="3055" y="676" width="32" height="32"/>
+  <object name="crazy-girl" x="2919" y="621" width="32" height="32"/>
+  <object name="crazy-girl" x="2309" y="504" width="32" height="32"/>
+  <object name="crazy-girl" x="2222" y="410" width="32" height="32"/>
+  <object name="crazy-girl" x="2337" y="803" width="32" height="32"/>
+  <object name="crazy-girl" x="1073" y="2607" width="32" height="32"/>
+  <object name="crazy-girl" x="1037" y="2313" width="32" height="32"/>
+  <object name="crazy-girl" x="1081" y="2052" width="32" height="32"/>
+  <object name="crazy-girl" x="1073" y="2742" width="32" height="32"/>
+  <object name="crazy-girl" x="1540" y="2016" width="32" height="32"/>
+  <object name="crazy-girl" x="1495" y="2277" width="32" height="32"/>
+  <object name="crazy-girl" x="1411" y="2601" width="32" height="32"/>
+  <object name="crazy-girl" x="1305" y="3025" width="32" height="32"/>
+  <object name="crazy-girl" x="1525" y="3258" width="32" height="32"/>
+  <object name="crazy-girl" x="1829" y="3139" width="32" height="32"/>
+  <object name="crazy-girl" x="1789" y="2741" width="32" height="32"/>
+  <object name="crazy-girl" x="1873" y="2417" width="32" height="32"/>
+  <object name="crazy-girl" x="2110" y="2781" width="32" height="32"/>
+  <object name="crazy-girl" x="2194" y="2457" width="32" height="32"/>
+  <object name="crazy-girl" x="2031" y="144" width="32" height="32"/>
+  <object name="crazy-girl" x="1469" y="100" width="32" height="32"/>
+  <object name="crazy-girl" x="2299" y="146" width="32" height="32"/>
+  <object name="crazy-girl" x="1004" y="194" width="32" height="32"/>
+  <object name="crazy-girl" x="187" y="111" width="32" height="32"/>
+  <object name="crazy-girl" x="507" y="158" width="32" height="32"/>
+  <object name="healthPack" x="1002" y="442" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="1002" y="602" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="1328" y="624" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="1328" y="784" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="158" y="512" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="158" y="672" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="84" y="1304" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="84" y="1464" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="crazy-girl" x="2820" y="1734" width="32" height="32"/>
+  <object name="crazy-girl" x="3024" y="2157" width="32" height="32"/>
+  <object name="crazy-girl" x="2814" y="1188" width="32" height="32"/>
+  <object name="crazy-girl" x="1795" y="1127" width="32" height="32"/>
+  <object name="crazy-girl" x="2135" y="1127" width="32" height="32"/>
+  <object name="crazy-girl" x="2483" y="1211" width="32" height="32"/>
+  <object name="crazy-girl" x="2551" y="1773" width="32" height="32"/>
+  <object name="crazy-girl" x="2537" y="2263" width="32" height="32"/>
+  <object name="crazy-girl" x="2593" y="2793" width="32" height="32"/>
+  <object name="crazy-girl" x="2219" y="3045" width="32" height="32"/>
+  <object name="crazy-girl" x="1021" y="1624" width="32" height="32"/>
+  <object name="crazy-girl" x="1419" y="1277" width="32" height="32"/>
+  <object name="crazy-girl" x="807" y="1299" width="32" height="32"/>
+  <object name="crazy-girl" x="419" y="986" width="32" height="32"/>
+  <object name="crazy-girl" x="849" y="1011" width="32" height="32"/>
+  <object name="crazy-girl" x="2852" y="3038" width="32" height="32"/>
+  <object name="crazy-girl" x="2852" y="3038" width="32" height="32"/>
+  <object name="crazy-girl" x="2885" y="2695" width="32" height="32"/>
+  <object name="crazy-girl" x="734" y="2352" width="32" height="32"/>
+  <object name="crazy-girl" x="96" y="2192" width="32" height="32"/>
+  <object name="crazy-girl" x="354" y="2032" width="32" height="32"/>
+  <object name="crazy-girl" x="342" y="1806" width="32" height="32"/>
+  <object name="crazy-girl" x="704" y="1808" width="32" height="32"/>
+  <object name="crazy-girl" x="2483" y="1211" width="32" height="32"/>
+  <object name="crazy-girl" x="1960" y="1453" width="32" height="32"/>
+  <object name="crazy-girl" x="1957" y="1889" width="32" height="32"/>
+  <object name="crazy-girl" x="2275" y="2149" width="32" height="32"/>
+  <object name="crazy-girl" x="2280" y="1853" width="32" height="32"/>
+  <object name="crazy-girl" x="2203" y="1692" width="32" height="32"/>
+  <object name="crazy-girl" x="1797" y="402" width="32" height="32"/>
+  <object name="crazy-girl" x="1838" y="840" width="32" height="32"/>
+  <object name="crazy-girl" x="1667" y="378" width="32" height="32"/>
+  <object name="crazy-girl" x="1691" y="807" width="32" height="32"/>
+  <object name="crazy-girl" x="1946" y="607" width="32" height="32"/>
+  <object name="crazy-girl" x="3126" y="842" width="32" height="32"/>
+  <object name="crazy-girl" x="3637" y="972" width="32" height="32"/>
+  <object name="crazy-girl" x="3253" y="1246" width="32" height="32"/>
+  <object name="crazy-girl" x="3281" y="1944" width="32" height="32"/>
+  <object name="crazy-girl" x="3281" y="1574" width="32" height="32"/>
+  <object name="crazy-girl" x="3635" y="1330" width="32" height="32"/>
+  <object name="crazy-girl" x="3663" y="2028" width="32" height="32"/>
+  <object name="crazy-girl" x="3663" y="1658" width="32" height="32"/>
+  <object name="crazy-girl" x="3663" y="2028" width="32" height="32"/>
+  <object name="crazy-girl" x="3635" y="1330" width="32" height="32"/>
+  <object name="crazy-girl" x="3663" y="1658" width="32" height="32"/>
+  <object name="crazy-girl" x="3593" y="2800" width="32" height="32"/>
+  <object name="crazy-girl" x="2949" y="1876" width="32" height="32"/>
+  <object name="crazy-girl" x="3397" y="2194" width="32" height="32"/>
+  <object name="crazy-girl" x="3593" y="2800" width="32" height="32"/>
+  <object name="crazy-girl" x="3593" y="2430" width="32" height="32"/>
+  <object name="crazy-girl" x="3593" y="2430" width="32" height="32"/>
+  <object name="crazy-girl" x="2057" y="989" width="32" height="32"/>
  </objectgroup>
  <layer name="collision" width="120" height="120">
   <data encoding="base64">
