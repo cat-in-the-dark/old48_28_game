@@ -14,6 +14,8 @@ var game = {
 		score : 0,
 		girl_choice : ""
 	},
+    
+    bullet_pull : [],
     //this is for bullets and kill list
     // ATTENTION - this values will be replaced by object GUID when in was created
     MAIN_HERO_ID: 0,
@@ -74,6 +76,8 @@ var game = {
         me.input.bindKey(me.input.KEY.D, "right");
         me.input.bindKey(me.input.KEY.P, "punch");
         
+        me.debug.renderHitBox = true;
+        
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());
         me.state.set(me.state.INTRO, new game.IntroScreen());
@@ -97,7 +101,6 @@ var game = {
     },
     
     hitObject: function (whoHitId, targetId) {
-        console.log(whoHitId, targetId);
         if (!targetId || !game.objectsPool[targetId]){ return; }
         
         var puncher = this.objectsPool[whoHitId];
