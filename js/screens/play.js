@@ -10,6 +10,7 @@ game.PlayScreen = me.ScreenObject.extend({
 		this.HUD = new game.HUD.Container();
 		me.game.world.addChild(this.HUD);
         
+        me.audio.play('bgm');
         me.levelDirector.loadLevel("area01");
 	},
 

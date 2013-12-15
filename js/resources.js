@@ -20,6 +20,7 @@ game.resources = [
     {name: "crazy_girl", type: "image", src: "data/img/Crazy_lady_all.png" },
 	{name: "health_pack", type: "image", src: "data/img/health_pack.png"},
 	{name: "ammo_pack", type: "image", src: "data/img/ammo.png"},
+    {name: "shooter", type: "image", src: "data/img/shooter.png"},
 
     {name: "intro_screen", type: "image", src: "data/img/intro_screen.png"},
     {name: "sara", type: "image", src: "data/img/sara_konnor.png"},
@@ -45,10 +46,8 @@ game.resources = [
     {name: "32x32_font",          type:"image", src: "data/img/32x32_font.png"},
     {name: "16x16_font",          type:"image", src: "data/img/16x16_font.png"},
 
-	/* Background music. 
-	 * @example
-	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
-	 */
+	/* Background music. */
+    {name: "bgm", type: "audio", src: "data/bgm/", channel : 7},
 
     /* 
      * Sound effects. 
@@ -69,5 +68,5 @@ game.resources = [
     {name: "mob_die2",  type: "audio", src: "data/sfx/mob/", channel : 4},
     {name: "mob_die3",  type: "audio", src: "data/sfx/mob/", channel : 5},
     {name: "mob_die4",  type: "audio", src: "data/sfx/mob/", channel : 6},
-    {name: "mob_die5",  type: "audio", src: "data/sfx/mob/", channel : 7}
+    {name: "mob_die5",  type: "audio", src: "data/sfx/mob/", channel : 6}
 ];

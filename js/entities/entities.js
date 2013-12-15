@@ -169,9 +169,13 @@ game.PlayerEntity = me.ObjectEntity.extend({
         return to_update;
     },
     
+    heal: function(value) {
+        game.player.health += Math.min(100 - game.player.health, value);
+        me.audio.play('beer');
+    },
+    
     updateBullets: function() {
         for (var i = 0, len = game.bullet_pull.length; i < len; i ++) {
-//            console.log(game.bullet_pull[i].inViewport);
             console.log(game.bullet_pull[i]);
             if(!(game.bullet_pull[i].inViewport)) {
                 console.log("here");
