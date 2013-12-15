@@ -20,6 +20,7 @@ game.resources = [
     {name: "crazy_girl", type: "image", src: "data/img/Crazy_lady_all.png" },
 	{name: "health_pack", type: "image", src: "data/img/health_pack.png"},
 	{name: "ammo_pack", type: "image", src: "data/img/ammo.png"},
+    {name: "shooter", type: "image", src: "data/img/shooter.png"},
 
     {name: "intro_screen", type: "image", src: "data/img/intro_screen.png"},
     {name: "sara", type: "image", src: "data/img/sara_konnor.png"},
