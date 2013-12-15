@@ -3,15 +3,31 @@ game.CrazyGirl = me.ObjectEntity.extend({
         settings.image = "crazy_girl";
         settings.spriteheight = 48;
         settings.spritewidth = 48;
+        this.parent(x, y, settings);
         
+        this.updateColRect(8, 32, 8, 32);
         this.weapon = game.panel.HAND;
         this.damage = game.getRandomInt(10,15);
         this.health = game.getRandomInt(1,5);
         this.activateDist = 450;
+        this.minDist = 32;
         
-        this.directionString = "up"
+        this.directionString = "up";
+
+        this.renderable.addAnimation("up-run",      [0, 1]);
+        this.renderable.addAnimation("right-run",   [3, 4]);
+        this.renderable.addAnimation("down-run",    [6, 7]);
+        this.renderable.addAnimation("left-run",    [9, 10]);
+        
+        this.renderable.addAnimation("up-idle",     [2]);
+        this.renderable.addAnimation("right-idle",  [5]);
+        this.renderable.addAnimation("down-idle",   [8]);
+        this.renderable.addAnimation("left-idle",   [11]);
+        
+        this.renderable.setCurrentAnimation(this.directionString + "-idle");
+        this.renderable.animationspeed = 8;
+               
         this.name = "Crazy girl";
-        this.parent(x, y, settings);
         this.gravity = 0.0;
         this.type = me.game.ENEMY_OBJECT;
         this.collidable = true;
@@ -88,17 +104,17 @@ game.CrazyGirl = me.ObjectEntity.extend({
         var direction = this.findHero();
         var vel = new me.Vector2d(0.0, 0.0);
         var dist = direction.length();
-        if (dist < this.activateDist && dist > 0) {
-            //this.renderable.setCurrentAnimation(this.directionString + '-run');
+        if (dist < this.activateDist && dist > this.minDist) {
+            this.renderable.setCurrentAnimation(this.directionString + '-run');
             direction.normalize();
             vel.x = direction.x * this.accel.x;
             vel.y = direction.y * this.accel.y;
-           // this.direction = direction;
         }
         return vel;
     },
     
     update: function () {
+        this.updateDirectionString();
         if (!this.knocked) {
             var vel = this.calcVel();  
             this.vel.x += vel.x;
@@ -106,9 +122,12 @@ game.CrazyGirl = me.ObjectEntity.extend({
         }
         if (this.vel.x != 0 || this.vel.y != 0) {
             this.updateMovement();
+            this.parent(this);
             return true;
         }
-        //this.renderable.setCurrentAnimation(this.directionString + '-idle');
+        
+        this.renderable.setCurrentAnimation(this.directionString + '-idle');
+        
         return false;
     }
 });
