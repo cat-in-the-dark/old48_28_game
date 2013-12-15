@@ -13,12 +13,16 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.weaponCooldownTime = 800;// ms
         this.weaponShutTime = 150;
         this.lastBoom = false; //  to update animation after shooting
-        
+
         this.gravity = 0.0;
         this.origVelocity = new me.Vector2d(5.0, 5.0);
         this.setVelocity(this.origVelocity.x, this.origVelocity.y);
         this.direction = new me.Vector2d(0.0, -1.0);
-        
+        this.bulletDirection = {
+            x: 0.0,
+            y: -1.0
+        };
+
         this.directionString = "up";
         var directions = [ "up", "right", "down", "left" ];
 
@@ -52,18 +56,26 @@ game.PlayerEntity = me.ObjectEntity.extend({
         if (me.input.isKeyPressed('left')) {
             this.directionString = "left";
             tempDir.x = -1.0;
+            this.bulletDirection.x = -1.0;
+            this.bulletDirection.y = 0.0;
         }
         if (me.input.isKeyPressed('right')) {
             this.directionString = "right";
             tempDir.x = 1.0;
+            this.bulletDirection.x = 1.0;
+            this.bulletDirection.y = 0.0;
         }
         if (me.input.isKeyPressed('down')) {
             this.directionString = "down";
             tempDir.y = 1.0;
+            this.bulletDirection.x = 0.0;
+            this.bulletDirection.y = 1.0;
         }
         if (me.input.isKeyPressed('up')) {
             this.directionString = "up";
             tempDir.y = -1.0;
+            this.bulletDirection.x = 0.0;
+            this.bulletDirection.y = -1.0;
         }
 
         //move
@@ -83,7 +95,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
                     that.isWeaponCooldown = false;
                 }, this.weaponShutTime);
                 this.lastBoom = true;
-                game.doPunch({x: this.pos.x, y: this.pos.y}, this.direction);
+                game.doPunch({x: this.pos.x, y: this.pos.y}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
                 this.cage -= 1;
             }
         }

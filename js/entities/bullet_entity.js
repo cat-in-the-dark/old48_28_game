@@ -23,8 +23,8 @@ game.BulletEntity = me.ObjectEntity.extend({
         this.computeVelocity(this.vel);
         this.updateMovement();
         
-        if (this.vel.x == 0 || this.vel.y == 0) {
-           // me.game.remove(bullet);
+        if (this.vel.x == 0 && this.vel.y == 0) {
+            me.game.remove(bullet);
         }
         
         return true;
