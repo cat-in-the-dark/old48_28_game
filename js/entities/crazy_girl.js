@@ -4,6 +4,8 @@ game.CrazyGirl = me.ObjectEntity.extend({
         settings.spriteheight = 48;
         settings.spritewidth = 48;
         
+        this.name = "Crazy girl";
+        this.weapon = game.panel.HAND;
         this.parent(x, y, settings);
         this.gravity = 0.0;
         this.type = me.game.ENEMY_OBJECT;
@@ -48,15 +50,15 @@ game.CrazyGirl = me.ObjectEntity.extend({
 
     punched: function(damage) {
         this.health -= damage;  
-        this.isItTimeToDie();
     },
     
     isItTimeToDie: function() {
         if (this.health <= 0) {
-            console.log(this.GUID + 'Die');
             me.game.remove(this);
             delete game.objectsPool[this.GUID];
+            return {name: this.name};
         }
+        return;
     },
     
     update: function () {

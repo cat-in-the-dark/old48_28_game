@@ -4,6 +4,8 @@ game.PlayerEntity = me.ObjectEntity.extend({
         settings.spriteheight = 48;
         settings.spritewidth = 48;
         this.parent(x, y, settings);
+        this.name = "Boy";
+        this.weapon = game.panel.PISTOLETO;
         
         game.MAIN_HERO_ID = this.GUID;
         
@@ -48,6 +50,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
         this.type = me.game.MAIN_HERO_OBJECT;
+        game.objectsPool[this.GUID] = this;
         game.player = this;
         console.log(this);
     },

@@ -96,7 +96,13 @@ var game = {
         console.log(whoHitId, targetId);
         if (!targetId || !game.objectsPool[targetId]){ return; }
         
+        var puncher = this.objectsPool[whoHitId];
         var obj = this.objectsPool[targetId];
         obj.punched(damage);
+        var dieInfo;
+        if (dieInfo = obj.isItTimeToDie()){
+            game.panel.kill(puncher.name, puncher.weapon, dieInfo.name);
+            console.log('Die ' + dieInfo.name);
+        }
     }
 };

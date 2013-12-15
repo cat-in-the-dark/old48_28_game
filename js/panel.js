@@ -9,6 +9,11 @@ function Stat(who, icon, whos){
 }    
 game.panel = {
     // Run on page load.
+    PISTOLETO: 'pistoleto',
+    SHOTGUN: 'shotgun',
+    SPOON: 'spoon', 
+    HAND: 'hand',
+    
 
     "init": function () {
         this.onResize = (function (that) {
@@ -105,13 +110,13 @@ game.panel = {
             var cImage = null;
             
             switch(stat.icon){
-                case 'pistoleto' :
+                case game.panel.PISTOLETO :
                     cImage = this.pistoletoIcon;
                 break;
-                case 'shotgun' :
+                case game.panel.SHOTGUN :
                     cImage = this.shotgunIcon;
                 break;
-                case 'spoon' :
+                case game.panel.SPOON :
                     cImage = this.spoonIcon;
                 break;
             }    
