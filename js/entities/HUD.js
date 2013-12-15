@@ -26,7 +26,7 @@ game.HUD.Container = me.ObjectContainer.extend({
 		this.name = "HUD";
 		
 		// add our child score object at the top left corner
-		this.addChild(new game.HUD.ScoreItem(520, 570));
+		this.addChild(new game.HUD.ScoreItem(400, 570));
 	}
 });
 
@@ -102,6 +102,11 @@ game.HUD.ScoreItem = me.Renderable.extend({
         this.font32.draw(context, this.ammo + '/' + this.cage, this.pos.x + dx, this.pos.y);
         this.font16.draw(context, 'AMMO', this.pos.x + dx + 35, this.pos.y+40);
         
+        if(typeof game.assistant.collectedHealthPacks !== 'undefined'){
+            dx += 190;
+            this.font32.draw(context, game.assistant.collectedHealthPacks, this.pos.x + dx, this.pos.y);
+            this.font16.draw(context, 'MEDCINE', this.pos.x + dx, this.pos.y+40);
+        }
         
 	}
 
