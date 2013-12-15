@@ -4,6 +4,7 @@ game.AssistantEntity = me.ObjectEntity.extend({
         settings.spriteheight = 48;
         settings.spritewidth = 48;
         this.parent(x, y, settings);
+        game.DOCTOR_GIRL_ID = this.GUID; // or SHUTER_GIRL_ID
         
         this.gravity = 0.0;
         

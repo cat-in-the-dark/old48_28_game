@@ -93,18 +93,21 @@ var game = {
         me.game.sort();
     },
     
-    hitObject: function (whoHitId, targetId, damage) {
-        damage = damage || 1;
+    hitObject: function (whoHitId, targetId) {
         console.log(whoHitId, targetId);
         if (!targetId || !game.objectsPool[targetId]){ return; }
         
         var puncher = this.objectsPool[whoHitId];
         var obj = this.objectsPool[targetId];
-        obj.punched(damage);
+        
+        obj.punched(puncher.damage);
         var dieInfo;
         if (dieInfo = obj.isItTimeToDie()){
             game.panel.kill(puncher.name, puncher.weapon, dieInfo.name);
             console.log('Die ' + dieInfo.name);
+            if (targetId == game.MAIN_HERO_ID || targetId == game.DOCTOR_GIRL_ID || targetId == game.SHUTER_GIRL_ID) {
+                console.log('GAME_OVER');
+            }
         }
     }
 };

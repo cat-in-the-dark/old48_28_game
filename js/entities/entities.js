@@ -6,6 +6,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.parent(x, y, settings);
         this.name = "Boy";
         this.weapon = game.panel.PISTOLETO;
+        this.damage = 1;
         
         game.MAIN_HERO_ID = this.GUID;
         
@@ -104,6 +105,19 @@ game.PlayerEntity = me.ObjectEntity.extend({
                 this.cage -= 1;
             }
         }
+    },
+    
+    punched: function (damage) {
+        this.health -= damage;
+    },
+    
+    isItTimeToDie: function () {
+        if (this.health <= 0) {
+            me.game.remove(this);
+            delete game.objectsPool[this.GUID];
+            return {name: this.name};
+        }
+        return;
     },
     
     checkAmmo: function() {
