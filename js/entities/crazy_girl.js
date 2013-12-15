@@ -1,5 +1,5 @@
 game.CrazyGirl = me.ObjectEntity.extend({
-    init: function (x, y, settings) {
+    init: function (x, y, settings) {    
         settings.image = "crazy_girl";
         settings.spriteheight = 48;
         settings.spritewidth = 48;
@@ -12,8 +12,9 @@ game.CrazyGirl = me.ObjectEntity.extend({
         this.origVelocity = new me.Vector2d(3.0, 3.0);
         this.setMaxVelocity(this.origVelocity.x, this.origVelocity.y);
         
-        this.hp = 3;
+        this.health = 3;
         
+        game.objectsPool[this.GUID] = this;
     },
     
     updateDirectionString: function () {
@@ -45,6 +46,18 @@ game.CrazyGirl = me.ObjectEntity.extend({
         return;
     },
 
+    punched: function(damage) {
+        this.health -= damage;  
+        this.isItTimeToDie();
+    },
+    
+    isItTimeToDie: function() {
+        if (this.health <= 0) {
+            console.log(this.GUID + 'Die');
+            me.game.remove(this);
+            delete game.objectsPool[this.GUID];
+        }
+    },
     
     update: function () {
     

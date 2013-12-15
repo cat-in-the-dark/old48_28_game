@@ -10,6 +10,13 @@ var game = {
 		score : 0,
 		girl_choice : ""
 	},
+    //this is for bullets and kill list
+    // ATTENTION - this values will be replaced by object GUID when in was created
+    MAIN_HERO_ID: 0,
+    DOCTOR_GIRL_ID: 1,
+    SHUTER_GIRL_ID: 2,
+    
+    objectsPool: {},
 	
 	
 	// Run on page load.
@@ -71,8 +78,9 @@ var game = {
         //me.state.change(me.state.INTRO);
 	},
     
-    doPunch: function (source, direction) {
-        var settings = {            
+    doPunch: function (id, source, direction) {
+        var settings = { 
+            id: id,
             image: "bullet",
             spriteheight: 24,
             spritewidth: 24
@@ -83,6 +91,12 @@ var game = {
         me.game.sort();
     },
     
-    hitObject: function (whoHitId, targetId) {
+    hitObject: function (whoHitId, targetId, damage) {
+        damage = damage || 1;
+        console.log(whoHitId, targetId);
+        if (!targetId || !game.objectsPool[targetId]){ return; }
+        
+        var obj = this.objectsPool[targetId];
+        obj.punched(damage);
     }
 };

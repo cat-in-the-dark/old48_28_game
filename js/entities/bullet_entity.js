@@ -4,15 +4,12 @@ game.BulletEntity = me.ObjectEntity.extend({
         this.gravity = 0.0;
         this.direction = direction;
         this.collidable = true;
+        this.id = settings.id;
         
         this.renderable.angle = settings.angle;
        
         this.origVelocity = new me.Vector2d(25.0, 25.0);
         this.setVelocity(this.origVelocity.x, this.origVelocity.y);
-        
-        //check coordinates
-        
-        console.log(this);
     },
     
     update: function() {
@@ -28,8 +25,10 @@ game.BulletEntity = me.ObjectEntity.extend({
         }
         
         var res = me.game.collide(this);
-        if (res && (res.type == me.game.ENEMY_OBJECT)) {
+        if (res && res.obj.GUID != this.id && (res.type == me.game.ENEMY_OBJECT)) {
+            console.log(res);
             me.game.remove(bullet);
+            game.hitObject(this.id, res.obj.GUID);
         }
         
         return true;

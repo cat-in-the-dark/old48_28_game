@@ -1,9 +1,11 @@
 game.PlayerEntity = me.ObjectEntity.extend({
-    init: function(x, y, settings) {
+    init: function(x, y, settings) {        
         settings.image = "main_hero";
         settings.spriteheight = 48;
         settings.spritewidth = 48;
         this.parent(x, y, settings);
+        
+        game.MAIN_HERO_ID = this.GUID;
         
         this.CAGE_SIZE = 12;
         this.health = 100;
@@ -95,7 +97,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
                     that.isWeaponCooldown = false;
                 }, this.weaponShutTime);
                 this.lastBoom = true;
-                game.doPunch({x: this.pos.x, y: this.pos.y}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
+                game.doPunch(this.GUID, {x: this.pos.x, y: this.pos.y}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
                 this.cage -= 1;
             }
         }
