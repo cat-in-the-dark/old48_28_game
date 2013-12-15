@@ -117,6 +117,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         if (this.health <= 0) {
             this.health = 0;
         }
+        me.audio.play('hard');
     },
     
     isItTimeToDie: function () {
