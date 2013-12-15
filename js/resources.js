@@ -27,6 +27,7 @@ game.resources = [
     {name: "annie", type: "image", src: "data/img/annie.png"},
     {name: "menu_background", type: "image", src: "data/img/menu_bagkground.png"},
     {name: "nurse", type: "image", src: "data/img/nurse.png"},
+    {name: "blood", type: "image", src: "data/img/blood.png"},
 
 	/* Atlases 
 	 * @example

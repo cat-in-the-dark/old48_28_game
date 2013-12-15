@@ -121,6 +121,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
     
     isItTimeToDie: function () {
         if (this.health <= 0) {
+            var blood = new game.Blood(this.pos.x, this.pos.y, new Object());
+            me.game.add(blood, this.z);
+            
             me.game.remove(this);
             delete game.objectsPool[this.GUID];
             return {name: this.name};

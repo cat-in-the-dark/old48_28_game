@@ -8,7 +8,7 @@ game.CrazyGirl = me.ObjectEntity.extend({
         this.updateColRect(8, 32, 8, 32);
         this.weapon = game.panel.SPOON;
         this.damage = game.getRandomInt(10,15);
-        this.weaponColdown = 300;
+        this.weaponColdown = 450;
         this.isWeaponColdown = false;
         this.health = game.getRandomInt(1,5);
         this.activateDist = 450;
@@ -102,9 +102,12 @@ game.CrazyGirl = me.ObjectEntity.extend({
     
     isItTimeToDie: function() {
         if (this.health <= 0) {
+            var blood = new game.Blood(this.pos.x, this.pos.y, new Object());
+            me.game.add(blood, this.z);
+
             me.game.remove(this);
             delete game.objectsPool[this.GUID];
-
+            
             var rand = game.getRandomInt (0,4);
             me.audio.play(this.deathSounds[rand]);
 

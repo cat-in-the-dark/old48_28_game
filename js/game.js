@@ -69,6 +69,7 @@ var game = {
 		me.entityPool.add("healthPack", game.HealthPack, true);
 		me.entityPool.add("ammoPack", game.AmmoPack, true);
         me.entityPool.add("assistant", game.AssistantEntity, true);
+        me.entityPool.add("blood", game.Blood, true);
         
         me.input.bindKey(me.input.KEY.W, "up");
         me.input.bindKey(me.input.KEY.A, "left");
