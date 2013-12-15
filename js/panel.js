@@ -12,7 +12,6 @@ game.panel = {
     PISTOLETO: 'pistoleto',
     SHOTGUN: 'shotgun',
     SPOON: 'spoon', 
-    HAND: 'hand',
     
 
     "init": function () {

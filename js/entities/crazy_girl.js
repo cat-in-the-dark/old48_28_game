@@ -6,11 +6,14 @@ game.CrazyGirl = me.ObjectEntity.extend({
         this.parent(x, y, settings);
         
         this.updateColRect(8, 32, 8, 32);
-        this.weapon = game.panel.HAND;
+        this.weapon = game.panel.SPOON;
         this.damage = game.getRandomInt(10,15);
+        this.weaponColdown = 300;
+        this.isWeaponColdown = false;
         this.health = game.getRandomInt(1,5);
         this.activateDist = 450;
         this.minDist = 32;
+        this.attackDist = 40;
         
         this.directionString = "up";
 
@@ -87,6 +90,16 @@ game.CrazyGirl = me.ObjectEntity.extend({
         }, this.knockTimeout);
     },
     
+    doPunch: function() {
+        var that = this;
+        if (!this.isWeaponColdown) {
+            this.isWeaponColdown = true;
+            setTimeout(function(){
+                that.isWeaponColdown = false;    
+            },this.weaponColdown);
+        }
+    },
+    
     isItTimeToDie: function() {
         if (this.health <= 0) {
             me.game.remove(this);
@@ -103,7 +116,7 @@ game.CrazyGirl = me.ObjectEntity.extend({
     calcVel: function () {
         var direction = this.findHero();
         var vel = new me.Vector2d(0.0, 0.0);
-        var dist = direction.length();
+        dist = direction.length();
         if (dist < this.activateDist && dist > this.minDist) {
             this.renderable.setCurrentAnimation(this.directionString + '-run');
             direction.normalize();
@@ -114,20 +127,26 @@ game.CrazyGirl = me.ObjectEntity.extend({
     },
     
     update: function () {
+        var res = me.game.collideType(this, me.game.MAIN_HERO_OBJECT);
+        if (res && (res.type == me.game.MAIN_HERO_OBJECT) && !this.isWeaponColdown) {
+            this.doPunch();
+            game.hitObject(this.GUID, res.obj.GUID);
+        }
+        
         this.updateDirectionString();
         if (!this.knocked) {
             var vel = this.calcVel();  
             this.vel.x += vel.x;
             this.vel.y += vel.y;
         }
+                
         if (this.vel.x != 0 || this.vel.y != 0) {
             this.updateMovement();
             this.parent(this);
             return true;
-        }
-        
-        this.renderable.setCurrentAnimation(this.directionString + '-idle');
-        
-        return false;
+        } else {
+            this.renderable.setCurrentAnimation(this.directionString + '-idle');
+            return false;
+        }        
     }
 });
