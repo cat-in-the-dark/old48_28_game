@@ -97,7 +97,6 @@ var game = {
     },
     
     hitObject: function (whoHitId, targetId) {
-        console.log(whoHitId, targetId);
         if (!targetId || !game.objectsPool[targetId]){ return; }
         
         var puncher = this.objectsPool[whoHitId];

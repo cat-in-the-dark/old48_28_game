@@ -26,7 +26,6 @@ game.BulletEntity = me.ObjectEntity.extend({
         
         var res = me.game.collide(this);
         if (res && res.obj.GUID != this.id && (res.type == me.game.ENEMY_OBJECT)) {
-            console.log(res);
             me.game.remove(bullet);
             game.hitObject(this.id, res.obj.GUID);
         }
