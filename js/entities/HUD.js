@@ -103,7 +103,7 @@ game.HUD.ScoreItem = me.Renderable.extend({
         this.font16.draw(context, 'AMMO', this.pos.x + dx + 35, this.pos.y+40);
         
         if(typeof game.assistant.collectedHealthPacks !== 'undefined'){
-            dx += 190;
+            dx += 210;
             this.font32.draw(context, game.assistant.collectedHealthPacks, this.pos.x + dx, this.pos.y);
             this.font16.draw(context, 'MEDCINE', this.pos.x + dx, this.pos.y+40);
         }
