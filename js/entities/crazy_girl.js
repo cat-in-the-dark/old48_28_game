@@ -136,9 +136,15 @@ game.CrazyGirl = me.ObjectEntity.extend({
             game.hitObject(this.GUID, res.obj.GUID);
         }
         
+//        var solidtest = me.game.collideType(this, me.game.ENEMY_OBJECT);
+//        if (solidtest) {
+//            this.pos.x -= solidtest.x;
+//            this.pos.y -= solidtest.y;
+//        }
+        
         this.updateDirectionString();
         if (!this.knocked) {
-            var vel = this.calcVel();  
+            var vel = this.calcVel();
             this.vel.x += vel.x;
             this.vel.y += vel.y;
         }
