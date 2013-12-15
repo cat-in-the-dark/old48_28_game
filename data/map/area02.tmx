@@ -22,7 +22,7 @@
   </data>
  </layer>
  <objectgroup name="entities" width="120" height="120">
-  <object name="mainPlayer" x="512" y="512" width="32" height="32">
+  <object name="mainPlayer" x="162" y="3682" width="32" height="32">
    <properties>
     <property name="image" value="test"/>
     <property name="spriteheight" value="32"/>
@@ -44,8 +44,28 @@
    </properties>
   </object>
   <object name="crazy-girl" x="480" y="352" width="32" height="32"/>
-  <object name="crazy-girl" x="408" y="624" width="32" height="32"/>
+  <object name="crazy-girl" x="807" y="3647" width="32" height="32"/>
   <object name="assistant" x="736" y="672" width="32" height="32"/>
+  <object name="crazy-girl" x="529" y="707" width="32" height="32"/>
+  <object name="crazy-girl" x="487" y="828" width="32" height="32"/>
+  <object name="crazy-girl" x="848" y="3428" width="32" height="32"/>
+  <object name="crazy-girl" x="596" y="3397" width="32" height="32"/>
+  <object name="crazy-girl" x="1004" y="3234" width="32" height="32"/>
+  <object name="crazy-girl" x="1001" y="3355" width="32" height="32"/>
+  <object name="crazy-girl" x="996" y="3526" width="32" height="32"/>
+  <object name="crazy-girl" x="996" y="3636" width="32" height="32"/>
+  <object name="crazy-girl" x="724" y="3213" width="32" height="32"/>
+  <object name="crazy-girl" x="444" y="3269" width="32" height="32"/>
+  <object name="crazy-girl" x="444" y="3020" width="32" height="32"/>
+  <object name="crazy-girl" x="514" y="3110" width="32" height="32"/>
+  <object name="crazy-girl" x="564" y="2970" width="32" height="32"/>
+  <object name="crazy-girl" x="636" y="3081" width="32" height="32"/>
+  <object name="crazy-girl" x="770" y="2986" width="32" height="32"/>
+  <object name="crazy-girl" x="889" y="3093" width="32" height="32"/>
+  <object name="crazy-girl" x="938" y="2979" width="32" height="32"/>
+  <object name="crazy-girl" x="865" y="2820" width="32" height="32"/>
+  <object name="crazy-girl" x="671" y="2820" width="32" height="32"/>
+  <object name="crazy-girl" x="717" y="2701" width="32" height="32"/>
  </objectgroup>
  <layer name="collision" width="120" height="120">
   <data encoding="base64">
