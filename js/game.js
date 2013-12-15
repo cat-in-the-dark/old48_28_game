@@ -1,6 +1,7 @@
 
 /* Game namespace */
 me.game.MAIN_HERO_OBJECT = 4;
+me.game.ASSISTANT_OBJECT = 5;
 
 var game = {
 
@@ -62,6 +63,7 @@ var game = {
         me.entityPool.add("bullet", game.BulletEntity, true);
 		me.entityPool.add("healthPack", game.HealthPack, true);
 		me.entityPool.add("ammoPack", game.AmmoPack, true);
+        me.entityPool.add("assistant", game.AssistantEntity, true);
         
         me.input.bindKey(me.input.KEY.W, "up");
         me.input.bindKey(me.input.KEY.A, "left");
