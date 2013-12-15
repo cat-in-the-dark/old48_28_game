@@ -94,7 +94,6 @@ game.AssistantEntity = me.ObjectEntity.extend({
             this.bulletDirection.x = 0.0;
             this.bulletDirection.y = -1.0;
         }
-//        this.directionString = game.player.directionString;
     },
 
     checkAction: function() {
@@ -126,6 +125,7 @@ game.AssistantEntity = me.ObjectEntity.extend({
             game.doPunch(this.GUID, {x: this.pos.x, y: this.pos.y}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
             game.doPunch(this.GUID, {x: this.pos.x + 10, y: this.pos.y + 10}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
             game.doPunch(this.GUID, {x: this.pos.x + 20, y: this.pos.y + 20}, new me.Vector2d(this.bulletDirection.x, this.bulletDirection.y));
+            me.audio.play("shotgun");
         }
     },
 
