@@ -176,9 +176,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
     
     updateBullets: function() {
         for (var i = 0, len = game.bullet_pull.length; i < len; i ++) {
-            console.log(game.bullet_pull[i]);
             if(!(game.bullet_pull[i].inViewport)) {
-                console.log("here");
                 me.game.remove(game.bullet_pull[i]);
                 game.bullet_pull[i] = null;
                 game.bullet_pull.splice(i, 1);
