@@ -43,6 +43,8 @@
     <property name="spritewidth" value="32"/>
    </properties>
   </object>
+  <object name="crazy-girl" x="480" y="352" width="32" height="32"/>
+  <object name="crazy-girl" x="408" y="624" width="32" height="32"/>
  </objectgroup>
  <layer name="collision" width="120" height="120" opacity="0.14">
   <data encoding="base64">

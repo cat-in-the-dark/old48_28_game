@@ -81,5 +81,8 @@ var game = {
         
         me.game.add(obj, 4);
         me.game.sort();
+    },
+    
+    hitObject: function (whoHitId, targetId) {
     }
 };

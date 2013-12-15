@@ -27,6 +27,11 @@ game.BulletEntity = me.ObjectEntity.extend({
             me.game.remove(bullet);
         }
         
+        var res = me.game.collide(this);
+        if (res && (res.type == me.game.ENEMY_OBJECT)) {
+            me.game.remove(bullet);
+        }
+        
         return true;
     }
 });
