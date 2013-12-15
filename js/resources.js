@@ -21,6 +21,8 @@ game.resources = [
 	{name: "health_pack", type: "image", src: "data/img/health_pack.png"},
 	{name: "ammo_pack", type: "image", src: "data/img/ammo.png"},
     {name: "shooter", type: "image", src: "data/img/shooter.png"},
+    {name: "win_screen_sara", type: "image", src: "/data/img/win_screen_sara.png"},
+    {name: "win_screen_annie", type: "image", src: "/data/img/win_screen_annie.png"},
 
     {name: "intro_screen", type: "image", src: "data/img/intro_screen.png"},
     {name: "sara", type: "image", src: "data/img/sara_konnor.png"},
