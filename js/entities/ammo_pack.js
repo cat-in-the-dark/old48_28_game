@@ -11,6 +11,7 @@ game.AmmoPack = me.CollectableEntity.extend({
 				obj.ammo += Math.min(96 - obj.ammo, 12);
 				this.collidable = false;
 				me.game.remove(this);
+                me.audio.play('pickup');
 			}
 		}
     }

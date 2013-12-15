@@ -57,6 +57,8 @@ game.resources = [
     {name: "usp", type: "audio", src: "data/sfx/hero/", channel : 1},
     {name: "usp_clipin", type: "audio", src: "data/sfx/hero/", channel : 1},
     {name: "usp_clipout", type: "audio", src: "data/sfx/hero/", channel : 1},
+    {name: "beer", type: "audio", src: "data/sfx/hero/", channel : 1},
+    {name: "pickup", type: "audio", src: "data/sfx/hero/", channel : 1},
 //    {name: "usp_slideback", type: "audio", src: "data/sfx/hero/", channel : 1},
 //    {name: "usp_sliderelease", type: "audio", src: "data/sfx/hero/", channel : 1},
     //assistance

@@ -11,6 +11,8 @@ game.HealthPack = me.CollectableEntity.extend({
 				obj.health += Math.min(100 - obj.health, 10);
 				this.collidable = false;
 				me.game.remove(this);
+                
+                me.audio.play('beer');
 			}
 		}
     }
