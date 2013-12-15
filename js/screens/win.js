@@ -7,9 +7,12 @@ game.WinScreen = me.ScreenObject.extend({
 
     onResetEvent: function() {
         if (this.title == null) {
-            this.title = me.loader.getImage("win_screen");
+            if (game.data.girl_choice == "annie") {
+                this.title = me.loader.getImage("win_screen_annie");
+            } else {
+                this.title = me.loader.getImage("win_screen_sara");
+            }
         }
-        me.input.bindKey(me.input.KEY.ENTER, "enter", true);
     },
 
     draw: function(context) {
