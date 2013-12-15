@@ -12,7 +12,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         
         this.CAGE_SIZE = 12;
         this.health = 100;
-        this.ammo = 48;
+        this.ammo = 192;
         this.cage = this.CAGE_SIZE; 
         this.isWeaponCooldown = false;
         this.weaponCooldownTime = 800;// ms

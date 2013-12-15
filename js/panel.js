@@ -85,7 +85,7 @@ game.panel = {
         this.font.draw(this.context2d, 'KILL_LIST', this.titleSize / 32 * 30, this.titleSize / 32 * 8);
         
 
-        var currentY = 45;
+        var currentY = 55;
         var x = 10;
         var lineInterval = 40;
 

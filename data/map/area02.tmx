@@ -246,6 +246,216 @@
   <object name="crazy-girl" x="3593" y="2430" width="32" height="32"/>
   <object name="crazy-girl" x="3593" y="2430" width="32" height="32"/>
   <object name="crazy-girl" x="2057" y="989" width="32" height="32"/>
+  <object name="healthPack" x="389" y="1208" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="406" y="2236" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="586" y="3221" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="333" y="3764" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="1273" y="3524" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="1467" y="1834" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="1553" y="437" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="2873" y="691" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="2896" y="348" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="2891" y="156" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="3281" y="157" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="3300" y="384" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="3476" y="3307" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="healthPack" x="2485" y="3764" width="32" height="32">
+   <properties>
+    <property name="image" value="health_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="792" y="3325" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="657" y="2480" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="111" y="1807" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="607" y="1328" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="1105" y="1028" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="785" y="735" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="1961" y="69" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="2757" y="60" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="3465" y="435" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="3465" y="435" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="3463" y="141" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="3745" y="2337" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="3479" y="3621" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="2371" y="3739" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="2349" y="2284" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ammoPack" x="2608" y="1148" width="32" height="32">
+   <properties>
+    <property name="image" value="ammo_pack"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="collision" width="120" height="120">
   <data encoding="base64">

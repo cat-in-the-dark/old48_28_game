@@ -7,8 +7,8 @@ game.AmmoPack = me.CollectableEntity.extend({
 
     onCollision: function(res, obj) {
         if (obj.type == me.game.MAIN_HERO_OBJECT) {
-			if (obj.ammo < 96) {
-				obj.ammo += Math.min(96 - obj.ammo, 12);
+			if (obj.ammo < 192) {
+				obj.ammo += Math.min(192 - obj.ammo, 84);
 				this.collidable = false;
 				me.game.remove(this);
                 me.audio.play('pickup');
