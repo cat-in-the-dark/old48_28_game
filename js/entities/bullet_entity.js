@@ -10,7 +10,6 @@ game.BulletEntity = me.ObjectEntity.extend({
        
         this.origVelocity = new me.Vector2d(25.0, 25.0);
         this.setVelocity(this.origVelocity.x, this.origVelocity.y);
-        this.updateColRect(8, 8, 8, 8);
         this.inViewport = true; //a little splint
         game.bullet_pull.push(this);
     },

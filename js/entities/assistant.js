@@ -5,7 +5,7 @@ game.AssistantEntity = me.ObjectEntity.extend({
         if (game.data.girl_choice == "annie") {
             settings.image = "nurse";
             game.DOCTOR_GIRL_ID = this.GUID;
-            this.collectedHealthPacks = 0;
+            this.collectedHealthPacks = 5;
         } else if (game.data.girl_choice == "sara") {
             settings.image = "shooter";
             this.isWeaponCooldown = false;
