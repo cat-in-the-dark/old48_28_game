@@ -3,6 +3,7 @@ game.AssistantEntity = me.ObjectEntity.extend({
         settings.image = "nurse";
         settings.spriteheight = 48;
         settings.spritewidth = 48;
+        
         this.parent(x, y, settings);
         game.DOCTOR_GIRL_ID = this.GUID; // or SHUTER_GIRL_ID
         
@@ -38,6 +39,8 @@ game.AssistantEntity = me.ObjectEntity.extend({
         //for debug
         this.posX = 1.0 * 48;
         this.posY = 1.0 * 48;
+        
+        this.updateColRect(8, 32, 8, 32);
     },
     
     checkMovement: function () {
