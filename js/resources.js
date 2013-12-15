@@ -33,6 +33,7 @@ game.resources = [
     {name: "loose_screen", type: "image", src: "data/img/loose_screen.png"},
     {name: "nurse", type: "image", src: "data/img/nurse.png"},
     {name: "blood", type: "image", src: "data/img/blood.png"},
+    {name: "crazy_lady_little", type: "image", src: "data/img/crazy_lady_little.png"},
 
 	/* Atlases 
 	 * @example
