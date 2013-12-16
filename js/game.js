@@ -1,4 +1,3 @@
-
 /* Game namespace */
 me.game.MAIN_HERO_OBJECT = 4;
 me.game.ASSISTANT_OBJECT = 5;
@@ -116,7 +115,6 @@ var game = {
         var dieInfo;
         if (dieInfo = obj.isItTimeToDie()){
             game.panel.kill(puncher.name, puncher.weapon, dieInfo.name);
-            console.log('Die ' + dieInfo.name);
             if (targetId == game.MAIN_HERO_ID || targetId == game.DOCTOR_GIRL_ID || targetId == game.SHUTER_GIRL_ID) {
                 setTimeout(function(){
                     me.state.change(me.state.GAMEOVER);
