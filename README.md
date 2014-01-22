@@ -38,3 +38,5 @@ shuting sounds from CS 1.6
 entities sounds from diablo 2 
 sound - ost from some game, i realy don't know. 
 ```
+
+[Start game](http://cat-in-the-dark-wood.github.io/old48_28_game)
