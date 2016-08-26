@@ -46,3 +46,5 @@ $RECYCLE.BIN/
 *.msp
 
 *~
+
+node_modules/
